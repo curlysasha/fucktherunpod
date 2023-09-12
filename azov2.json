@@ -1,0 +1,5 @@
+{
+    "description": "",
+    "notes": "",
+    "vae": "vae-ft-mse-840000-ema-pruned.ckpt"
+}
