@@ -40,8 +40,11 @@ pip install -U dynamicprompts
 cd /workspace/
 source venv/bin/activate
 python -m pip install -U pip
+
 pip uninstall -y onnx onnxruntime onnxruntime-gpu onnxruntime-silicon onnxruntime-extensions
+
 pip install onnx==1.14.1 onnxruntime==1.15.1
+
 
 #ПОМЕНЯТЬ НАСТРОЙКИ ДИНАМИК ПРОМТОВ []
 #ПОМЕНЯТЬ НАСТРОЙКИ КЕШ КОНТРОЛНЕТ
