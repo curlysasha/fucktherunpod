@@ -2,6 +2,8 @@ cd
 
 wget -O /workspace/stable-diffusion-webui/models/Stable-diffusion/azov2.safetensors https://civitai.com/api/download/models/38589
 
+wget -O /workspace/stable-diffusion-webui/models/ESRGAN/4x-UltraSharp.pths https://huggingface.co/SBlack/yandexMorehod/resolve/main/4x-UltraSharp.pth?download=true
+
 wget -P /workspace/stable-diffusion-webui/models/VAE/ https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt
 
 wget -P /workspace/stable-diffusion-webui/models/ControlNet/ https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.pth
