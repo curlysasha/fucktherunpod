@@ -32,7 +32,9 @@ wget -P /workspace/stable-diffusion-webui/models/insightface https://github.com/
 
 cd /workspace/stable-diffusion-webui/extensions/sd-webui-controlnet git pull
 
-apt install unzip cd wget https://files.pythonhosted.org/packages/83/6a/27d221e7ff0cccf490a460cdb1c559b278d0ae2acec53d365ed3c706ef9f/dynamicprompts-0.29.0-py2.py3-none-any.whl 
+apt install unzip 
+cd 
+wget https://files.pythonhosted.org/packages/83/6a/27d221e7ff0cccf490a460cdb1c559b278d0ae2acec53d365ed3c706ef9f/dynamicprompts-0.29.0-py2.py3-none-any.whl 
 python -m pip install dynamicprompts-0.29.0-py2.py3-none-any.whl pip install -U dynamicprompts
 
 cd /workspace/
