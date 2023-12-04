@@ -8,7 +8,7 @@ wget -P /workspace/ComfyUI/models/upscale_models/ https://huggingface.co/SBlack/
 wget -P /workspace/ComfyUI/models/ipadapter/ https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.bin
 wget -P /workspace/ComfyUI/models/clip_vision/ https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors
 
-wget -P /workspace/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models https://huggingface.co/SBlack/yandexMorehod/resolve/main/motionModel_v01Nsfw.ckpt?download=true
+wget -P /workspace/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models https://huggingface.co/SBlack/yandexMorehod/resolve/main/motionModel_v01Nsfw.ckpt
 apt-get update
 apt-get install build-essential
 pip install insightface 
