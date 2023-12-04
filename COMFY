@@ -3,7 +3,17 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git /workspace/ComfyUI/cus
 wget -O /workspace/ComfyUI/models/checkpoints/azov2.safetensors https://civitai.com/api/download/models/38589
 wget -P /workspace/ComfyUI/models/vae/ https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt
 wget -P /workspace/ComfyUI/models/controlnet/ https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p.pth
-wget -P /workspace/ComfyUI/models/controlnet/ https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.pth
+wget -P /workspace/ComfyUI/models/controlnet/ https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_softedge.pth
 wget -P /workspace/ComfyUI/models/upscale_models/ https://huggingface.co/SBlack/yandexMorehod/resolve/main/4x-UltraSharp.pth
 wget -P /workspace/ComfyUI/models/ipadapter/ https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.bin
 wget -P /workspace/ComfyUI/models/clip_vision/ https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors
+
+wget -P /workspace/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models https://huggingface.co/SBlack/yandexMorehod/resolve/main/motionModel_v01Nsfw.ckpt?download=true
+apt-get update
+apt-get install build-essential
+pip install insightface 
+pip install ultralytics 
+pip install onnxruntime
+
+pip install blendmodes
+pip install exllamav2_ext
