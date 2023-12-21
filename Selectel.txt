@@ -1,0 +1,56 @@
+apt update && sudo apt upgrade -y 
+apt install software-properties-common -y 
+add-apt-repository -y ppa:deadsnakes/ppa 
+sudo apt install git python3.10-venv -y
+apt-get install unzip
+apt-get install build-essential
+apt install -y python3-pip
+
+
+
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui && cd stable-diffusion-webui
+python3.10 -m venv venv
+
+wget -O ~/stable-diffusion-webui/models/Stable-diffusion/azov2.safetensors https://huggingface.co/SBlack/yandexMorehod/resolve/main/aZovyaRPGArtistTools_v2.safetensors?download=true
+wget -P ~/stable-diffusion-webui/models/VAE/ https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt
+wget -P ~/stable-diffusion-webui/models/ControlNet/ https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.pth
+wget -P ~/stable-diffusion-webui/models/ControlNet/ https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.pth
+
+git clone https://github.com/curlysasha/fucktherunpod.git
+unzip embeddings.zip -d ~/stable-diffusion-webui/embeddings
+
+cp -r webui-user.sh ~/stable-diffusion-webui/webui-user.sh 
+cp -r azov2.json ~/stable-diffusion-webui/models/Stable-diffusion
+
+
+pip install insightface 
+pip install ultralytics 
+pip install onnxruntime
+
+git clone https://github.com/curlysasha/sd-webui-controlnet.git ~/stable-diffusion-webui/extensions/sd-webui-controlnet
+git clone https://github.com/Bing-su/adetailer.git ~/stable-diffusion-webui/extensions/adetailer
+git clone https://github.com/Gourieff/sd-webui-reactor-force.git ~/stable-diffusion-webui/extensions/sd-webui-reactor-force
+wget -P ~/stable-diffusion-webui/models/insightface https://github.com/facefusion/facefusion-assets/releases/download/models/inswapper_128.onnx
+
+cd ~/stable-diffusion-webui/
+source venv/bin/activate
+
+apt install -y python3.10-dev
+pip install build-essential
+pip install insightface
+pip install ultralytics 
+pip install onnxruntime
+
+
+python -m pip install -U pip
+pip uninstall -y onnx onnxruntime onnxruntime-gpu onnxruntime-silicon onnxruntime-extensions
+pip install onnx==1.14.1 onnxruntime==1.15.1
+
+sudo apt install -y --no-install-recommends google-perftools
+
+sudo apt install -y nvidia-driver-535 nvidia-dkms-535 
+bash webui.sh -f
+
+
+CONTROL-C
+bash webui.sh -f
